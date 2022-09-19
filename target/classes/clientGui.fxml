@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: BlanchedAlmond;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientCotroller">
+   <children>
+      <TextField fx:id="textBox" disable="true" layoutX="14.0" layoutY="110.0" prefHeight="26.0" prefWidth="310.0" />
+      <Button fx:id="send" disable="true" layoutX="353.0" layoutY="110.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="26.0" prefWidth="72.0" text="send" />
+      <ListView fx:id="clientList" layoutX="31.0" layoutY="202.0" prefHeight="377.0" prefWidth="538.0" />
+      <Button fx:id="groupChat" layoutX="14.0" layoutY="70.0" mnemonicParsing="false" onAction="#sendAllPeople" prefHeight="26.0" prefWidth="114.0" text="Chat to All people" />
+      <MenuButton fx:id="menu" alignment="CENTER" layoutX="160.0" layoutY="70.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="114.0" text="Individual chat">
+         <items>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#sendToIndividual" text="OK" />
+         </items>
+      </MenuButton>
+      <ListView fx:id="clientOnline" layoutX="451.0" layoutY="44.0" prefHeight="92.0" prefWidth="135.0" />
+      <Label layoutX="254.0" layoutY="178.0" prefHeight="33.0" prefWidth="114.0" text="Chat Room" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="472.0" layoutY="14.0" prefHeight="33.0" prefWidth="114.0" text="Clients Online" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="confrim" alignment="CENTER" layoutX="302.0" layoutY="70.0" mnemonicParsing="false" onAction="#Confrim" prefHeight="26.0" prefWidth="114.0" text="Confirm" textAlignment="CENTER" />
+      <Label fx:id="user" alignment="CENTER" layoutX="91.0" layoutY="7.0" prefHeight="33.0" prefWidth="272.0">
+         <font>
+            <Font name="Academy Engraved LET Plain:1.0" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
